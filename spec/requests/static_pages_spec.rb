@@ -33,4 +33,15 @@ describe "Static pages" do
 			page.should have_selector('h1', :text => 'About Us')
 		end
 	end
+
+	describe "Contact page" do
+		it "should have title 'Contact'" do
+			visit '/static_pages/contact'
+			page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Contact")
+		end
+		it "should have h1 'Contact'" do
+			visit '/static_pages/contact'
+			page.should have_selector('h1', :text => "Contact");
+		end
+	end
 end
